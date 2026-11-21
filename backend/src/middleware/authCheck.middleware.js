@@ -3,6 +3,7 @@ import jwt  from 'jsonwebtoken'
 import credentials from '../config/config.js'
 import {client} from '../utils/redis.js'
 
+
 const checkAuth = async (req, res, next) => {
   try {
     const authorization = req.get('authorization')
