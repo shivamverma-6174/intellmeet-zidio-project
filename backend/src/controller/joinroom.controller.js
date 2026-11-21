@@ -8,6 +8,7 @@ const joinRoom = async (req, res, next) => {
       { new: true },
     ).populate('createdBy members', 'username email')
 
+    
     if (!room) {
       return res.status(404).json({ message: 'Active room not found' })
     }
